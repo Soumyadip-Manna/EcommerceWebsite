@@ -1,0 +1,108 @@
+<div class='col-md-4 mb-2'>
+    <div class='card' >
+        <img src='./images/box2_image.jpg' class='card-img-top' alt='...'>
+        <div class='card-body'>
+        <h5 class='card-title'>Card title</h5>
+        <p class='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href='#' class='btn btn-info'>Add to cart</a>
+        <a href='#' class='btn btn-secondary'>View more</a>
+        </div>
+    </div>
+</div>
+<div class='col-md-4 mb-2'>
+    <div class='card' >
+        <img src='./images/box3_image.jpg' class='card-img-top' alt='...'>
+        <div class='card-body'>
+        <h5 class='card-title'>Card title</h5>
+        <p class='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href='#' class='btn btn-info'>Add to cart</a>
+        <a href='#' class='btn btn-secondary'>View more</a>
+        </div>
+    </div>
+</div>
+<div class='col-md-4 mb-2'>
+    <div class='card' >
+        <img src='./images/box3_image.jpg' class='card-img-top' alt='...'>
+        <div class='card-body'>
+        <h5 class='card-title'>Card title</h5>
+        <p class='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href='#' class='btn btn-info'>Add to cart</a>
+        <a href='#' class='btn btn-secondary'>View more</a>
+        </div>
+    </div>
+</div>
+<div class='col-md-4 mb-2'>
+    <div class='card' >
+        <img src='./images/box3_image.jpg' class='card-img-top' alt='...'>
+        <div class='card-body'>
+        <h5 class='card-title'>Card title</h5>
+        <p class='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href='#' class='btn btn-info'>Add to cart</a>
+        <a href='#' class='btn btn-secondary'>View more</a>
+        </div>
+    </div>
+</div>
+<div class='col-md-4 mb-2'>
+    <div class='card' >
+        <img src='./images/box3_image.jpg' class='card-img-top' alt='...'>
+        <div class='card-body'>
+        <h5 class='card-title'>Card title</h5>
+        <p class='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href='#' class='btn btn-info'>Add to cart</a>
+        <a href='#' class='btn btn-secondary'>View more</a>
+        </div>
+    </div>
+</div>
+$select_query = 'SELECT * FROM `products` order by rand() limit 0,7';
+                $result_query = mysqli_query($con,$select_query);
+                <!-- // $row = mysqli_fetch_assoc($result_query); -->
+                //  echo $row['product_title'];
+                 while($row = mysqli_fetch_assoc($result_query)) {
+                    $product_id = $row['product_id'];
+                    $product_title =$row['product_title'];
+                    $product_description = $row['product_description'];
+                    // $product_keywords = $row['product_keywords'];
+                    $product_image1 = $row['product_image1'];
+                    $product_price= $row['product_price'];
+                    $category_id = $row['category_id'];
+                    $brand_id = $row['brand_id'];
+
+
+                    echo '<div class='col-md-4 mb-2'>
+                    <div class='card'>
+                        <img src='./admin_area/product_images/$product_image1' class='card-img-top' alt='$product_title'>
+                        <div class='card-body'>
+                        <h5 class='card-title'>$product_title</h5>
+                        <p class='card-text'>$product_description</p>
+                        <a href='#' class='btn btn-info'>Add to cart</a>
+                        <a href='#' class='btn btn-secondary'>View more</a>
+                        </div>
+                    </div>
+                </div>   ';
+                 }
+<!-- <h4 class='px-3'>Subtotal :<strong class='text-info'><?php echo  $total_price?>/-</strong></h4>
+                    <a href='index.php'><button class='bg-info px-5 border-0 mx-3 py-3' >Continue shopping</button></a>
+                    <a href='#'><button class='bg-secondary px-5 border-0 text-light py-3'>Checkout</button></a> -->
+
+                    <!-- // <a href='index.php'><button class='bg-info px-5 border-0 mx-3 py-3' >Continue shopping</button></a>
+
+
+                    text-decoration-none
+                    if($sql_execute) {
+                        echo '<script>alert('data inserted successfully');</script>';
+                    }
+                    else{
+                        die(mysqli_connect_error($con));
+                    } -->
+
+
+                    <tr class='text-center'>
+                        <td>1</td>
+                        <td>mango</td>
+                        <td>img</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>r</td>
+                        <td><a href='#' class=''><i class='fa-solid fa-pen-to-square'></i></a></td>
+                        <td><a href='#' class=''><i class='fa-solid fa-trash'></i></a></td>
+                    </tr>
